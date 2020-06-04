@@ -1,0 +1,15 @@
+{
+  "name": "asset-manager",
+  "version": "1.0.0",
+  "description": "Mutable Asset Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "author": "Igancio Murillo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
