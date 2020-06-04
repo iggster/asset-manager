@@ -39,4 +39,6 @@ router.post('/users/logoutALL', async (req,res) => {
     res.status(200).send('Logging out all sessions.')
 })
 
+module.exports = router
+
 

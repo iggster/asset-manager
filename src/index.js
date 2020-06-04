@@ -1,11 +1,10 @@
 const express = require('express')
 const app = express()
+const userRouter = require('./routers/users')
 port = process.env.PORT || 3000
 
-
-app.get('/', (req,res) => {
-    res.status(200).send('App up and running.')
-})
+app.use(express.json())
+app.use(userRouter)
 
 
 app.listen( port, () => {
