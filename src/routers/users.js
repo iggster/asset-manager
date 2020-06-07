@@ -22,13 +22,17 @@ router.patch('/users', async (req, res) => {
 
 //Create user
 router.post('/users', async (req, res) => {
+    const user = new User(req.body)
+
     try {
-        const user = new User(req.body)
         await user.save()
-        res.status(200).send(user)
+        const token = await user.getAuthenticationToken()
+       // sendWelcomeEmail(user.email, user.name)
+       console.log(user)
+       console.log(token)
+        res.status(201).send({ user, token })
     } catch (e) {
         res.status(400).send(e)
-
     }
 
 })
