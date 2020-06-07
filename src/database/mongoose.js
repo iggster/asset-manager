@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const assetDB = process.env.MONGO_DB_CONNECTION_ASSET_MANAGER
+const assetDB = process.env.MONGO_DB_CONNECTION_ASSET_MANAGER_LOCAL
 
 
 //Monggose connect to Mongo.
